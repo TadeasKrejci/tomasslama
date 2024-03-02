@@ -1,0 +1,77 @@
+---
+// @ts-ignore
+
+
+import Icon from "./ui/icon.astro";
+const features = [
+  {
+    title: "Shoptet",
+    description:
+      "Potřebujete pomoct s Vašim e-shopem na platformě SHOPTET? Mám dlouholeté zkušenosti s tvorbou a správou e-shopů na platformě Shoptet. Pomůžu Vám s celou řadou problematik.",
+    icon: "shoptet",
+  },
+  {
+    title: "Webové stránky",
+    description:
+      "Vytvořím pro Vás jednoduché webové prezentace, nebo webové stránky na míru přímo dle Vašich potřeb a požadavků.",
+    icon: "code",
+  },
+  {
+    title: "E-shopy",
+    description:
+      "Navrhnu pro Vás e-shop dle Vašich požadavků a potřeb. Součástí e-shopu je také administrace šitá přímo na míru Vašeho podnikání. Pro Váš komfort Vám nabízím také správu a reklamní materiály pro Váš byznys.",
+    icon: "eshopy",
+  },
+  {
+    title: "Webový design",
+    description:
+      "Navrhnu Vám poutavé responzivní webové stránky, které budou funkční a krásné. Vdechnu Vašim zastaralým stránkám nový život a vytvořím z nich moderní webové stránky 21. století, za které se nebudete stydět.",
+    icon: "designe",
+  },
+  {
+    title: "Grafický design",
+    description:
+      "Nabízím Vám širokou paletu grafických služeb. Navrhuji online i offline grafické materiály, předtiskové přípravy, loga, brožury, plakáty a spoustu dalších grafických materiálů dle Vašich potřeb.",
+    icon: "paint",
+  },
+  {
+    title: "Sociální sítě",
+    description:
+      "Nemáte čas spravovat vaše sociální sítě? Zajistím Vám veškeré grafické podklady šité pro Váš byznys a také správu těchto sociálních sítí a reklam.",
+    icon: "social",
+
+  },
+];
+---
+<div class="w-full bg-[#F2F2F2]">
+<div class="container mx-auto px-5 lg:px-40">
+<div id="sluzby" class="my-10 py-20">
+  <div class="mt-40 md:mt-0 text-center">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-[#C70000]">
+      Služby
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      Co pro vás mohu udělat?
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+    {
+      features.map((item) =>
+        <div class="gap-4 items-center hover:bg-[#C70000] hover:text-white hover:shadow-lg hover:rounded-[40px] p-5 group">
+          <div class="mt-1 mb-5 bg-[#C70000] mx-auto rounded-full p-3 w-20 h-20 shrink-0">
+            <Icon name={item.icon} alt={item.title}  />
+          </div>
+          <div>
+            <h3 class="font-semibold text-2xl text-center">{item.title}</h3>
+            <p class="mt-2 leading-relaxed text-center">{item.description}</p>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</div>
+</div>
+      </div>
+
+

@@ -1,0 +1,225 @@
+<article id="kontakt" class="w-full bg-gray-50">
+  <div class="container mx-auto px-5 lg:px-40">
+    <div class="mt-40 md:mt-0 text-center">
+      <h2 class="text-4xl pt-10 mb-10 lg:text-5xl font-bold lg:tracking-tight text-[#C70000]">
+        Kontakt
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-1 md:grid-cols-2 mb-10">
+      <div class="flex-1">
+        <h3 class="font-semibold text-2xl pb-1">Zanechte mi zprávu</h3>
+
+
+        <div id="app" class="flex items-center text-black">
+          <div class="w-full pr-10">
+            <div class="">
+
+              <div class="flex flex-col">
+                <label for="" class="font-semibold text-black pb-4"></label>
+                <input type="text" placeholder="Jméno"
+                       class="border rounded outline-none p-1 py-2 pl-3 bg-white focus:bg-gray-100" v-model="fullName">
+                <p class="text-xs text-black hidden">Jméno</p>
+              </div>
+
+              <div class="flex flex-col">
+                <label for="" class="font-semibold text-black pb-4"></label>
+                <input type="text" placeholder="Telefon"
+                       class="border rounded outline-none p-1 py-2 pl-3 bg-white focus:bg-gray-100" v-model="tel">
+                <p class="text-xs text-black hidden">Jméno</p>
+              </div>
+
+              <div class="flex flex-col">
+                <label for="" class="font-semibold text-black pb-4"></label>
+                <input type="text" placeholder="E-mail"
+                       class="border rounded outline-none p-1 py-2 pl-3 bg-white focus:bg-gray-100" v-model="email">
+                <p class="text-xs text-black hidden">E-mail</p>
+              </div>
+
+              <div class="flex flex-col">
+                <label for="" class="font-semibold text-black pb-4"></label>
+                <textarea placeholder="Vaše zpráva"
+                          class="border rounded outline-none p-1 py-2 pl-3 bg-white focus:bg-gray-100" rows="4"
+                          v-model="message"></textarea>
+                <p class="text-xs text-black hidden">Zpráva</p>
+              </div>
+
+              <div class="my-4 text-left">
+                <button type="button"
+                        class="text-lg tracking-wide px-6 py-1 outline-none rounded-full bg-[#C70000] text-white hover:bg-red-600"
+                        :disabled="!isValid" @click="submit">Odeslat
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="flex-1">
+        <h3 class="font-semibold text-2xl pb-4">Zastavte se na kávu</h3>
+        <p>Máte zájem se mnou spolupracovat a nechcete řešit Váš problém pomocí internetu? Stavte se za mnou do
+          kanceláře na dobrou kávu a vymysleme společné řešení Vašich požadavků.
+          <br> <br>
+          Pokud to máte daleko, ozvěte se mi a můžeme se potkat na kávě u Vás ve firmě, nebo na smluveném místě.</p>
+
+        <div class="flex items-center pt-5 pb-2 space-x-4">
+          <div class="text-2xl">
+            <!-- SVG ikona domečku -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="100%" viewBox="0 0 16.882 15.007">
+              <path id="house-chimney"
+                    d="M15.939,8.43a.945.945,0,0,0,.938-.941.8.8,0,0,0-.322-.7L15.007,5.423V1.876a.937.937,0,0,0-.938-.938h-.938a.937.937,0,0,0-.938.938V2.952L9.072.205A.974.974,0,0,0,8.456,0a.846.846,0,0,0-.645.234L.293,6.785a.953.953,0,0,0-.293.7.928.928,0,0,0,.938.941h.938v2.043a.741.741,0,0,0,0,.082v3.28a1.172,1.172,0,0,0,1.172,1.172h.469c.035,0,.07,0,.106-.006s.088.006.132.006H5.393a1.172,1.172,0,0,0,1.172-1.172V11.255a.937.937,0,0,1,.938-.938H9.379a.937.937,0,0,1,.938.938v2.579a1.172,1.172,0,0,0,1.172,1.172h1.656c.041,0,.082,0,.123,0s.064,0,.1,0h.469a1.172,1.172,0,0,0,1.172-1.172V13.36a2.065,2.065,0,0,0,.015-.237L15,8.427h.938Z"
+                    fill="#c70000" />
+            </svg>
+
+          </div>
+          <div>
+            Husova 373/27, Valašské Meziříčí 757 01
+
+          </div>
+        </div>
+
+        <div class="flex items-center pb-2 space-x-4">
+          <div class="text-2xl">
+            <!-- SVG ikona telefonu -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="100%" viewBox="0 0 15.008 15.007">
+              <path id="phone"
+                    d="M4.833.7A1.169,1.169,0,0,0,3.444.019L.865.723A1.176,1.176,0,0,0,0,1.854,13.132,13.132,0,0,0,13.131,14.985a1.176,1.176,0,0,0,1.131-.865l.7-2.579a1.169,1.169,0,0,0-.68-1.389L11.472,8.979a1.169,1.169,0,0,0-1.357.34L8.931,10.764a9.906,9.906,0,0,1-4.71-4.71L5.666,4.873a1.17,1.17,0,0,0,.34-1.357L4.833.7Z"
+                    transform="translate(0 0.022)" fill="#c70000" />
+            </svg>
+
+          </div>
+          <div>
+            +420 608 155 516
+          </div>
+        </div>
+
+        <div class="flex items-center pb-2 space-x-4">
+          <div class="text-2xl">
+            <!-- SVG ikona emailu -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="100%" viewBox="0 0 15.648 11.736">
+              <path id="envelope"
+                    d="M1.467,64a1.467,1.467,0,0,0-.88,2.641l6.651,4.988a.981.981,0,0,0,1.174,0l6.651-4.988A1.467,1.467,0,0,0,14.181,64ZM0,67.423V73.78a1.958,1.958,0,0,0,1.956,1.956H13.692a1.958,1.958,0,0,0,1.956-1.956V67.423L9,72.411a1.953,1.953,0,0,1-2.347,0Z"
+                    transform="translate(0 -64)" fill="#c70000" />
+            </svg>
+
+          </div>
+          <div>
+            slamatomas737@gmail.com
+          </div>
+        </div>
+
+        <div class="flex pt-5">
+          <div class="pr-3">
+          <a href="https://www.facebook.com/TomasSlamaTS/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27.427" height="27.427" viewBox="0 0 27.427 27.427">
+              <path id="icons8-facebook"
+                    d="M24.914,0H2.513A2.536,2.536,0,0,0,0,2.513v22.4a2.536,2.536,0,0,0,2.513,2.513h11.2V16H10.285V12.571h3.428V9.142c0-2.857,1.143-4.571,4.571-4.571h3.428V8H20.227a2,2,0,0,0-1.942,1.942v2.629h4.571L22.285,16h-4V27.427h6.629a2.536,2.536,0,0,0,2.513-2.513V2.513A2.536,2.536,0,0,0,24.914,0Z"
+                    fill="#c70000" />
+            </svg>
+          </a>
+          </div>
+
+          <div class="pr-3">
+            <a href="https://www.linkedin.com/in/tomas-slama/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27.427" height="27.427" viewBox="0 0 27.427 27.427">
+              <path id="Path_2" data-name="Path 2"
+                    d="M1,3.291A2.291,2.291,0,0,1,3.291,1H26.133a2.29,2.29,0,0,1,2.294,2.291V26.133a2.291,2.291,0,0,1-2.293,2.294H3.291A2.291,2.291,0,0,1,1,26.135Zm10.856,8.166H15.57v1.865a4.256,4.256,0,0,1,3.968-2.037c3.951,0,4.887,2.136,4.887,6.054V24.6h-4V18.232c0-2.232-.536-3.491-1.9-3.491-1.889,0-2.674,1.358-2.674,3.491V24.6h-4V11.457ZM5,24.427H9V11.285H5v13.14ZM9.571,7A2.572,2.572,0,1,1,7,4.427,2.571,2.571,0,0,1,9.571,7Z"
+                    transform="translate(-1 -1)" fill="#c70000" fill-rule="evenodd" />
+            </svg>
+            </a>
+          </div>
+
+          <div class="pr-3">
+            <a href="https://www.instagram.com/tomas.sla/" target="_blank">
+            <svg id="Group_59" data-name="Group 59" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" width="27.429" height="27.429" viewBox="0 0 27.429 27.429">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect id="Rectangle_76" data-name="Rectangle 76" width="27.429" height="27.429" fill="#c70000" />
+                </clipPath>
+              </defs>
+              <g id="Group_58" data-name="Group 58" transform="translate(0 0)" clip-path="url(#clip-path)">
+                <path id="Path_57" data-name="Path 57"
+                      d="M25.135,0H2.291A2.292,2.292,0,0,0,0,2.291V25.138a2.292,2.292,0,0,0,2.291,2.291h22.85a2.291,2.291,0,0,0,2.288-2.294V2.287A2.29,2.29,0,0,0,25.135,0m-.413,18.249a6.5,6.5,0,0,1-6.473,6.473H9.181a6.5,6.5,0,0,1-6.472-6.473V9.181A6.5,6.5,0,0,1,9.181,2.707h9.068a6.5,6.5,0,0,1,6.473,6.473Z"
+                      transform="translate(0 0)" fill="#c70000" fill-rule="evenodd" />
+                <path id="Path_58" data-name="Path 58"
+                      d="M19.786,6.246H10.718a4.465,4.465,0,0,0-4.472,4.472v9.068a4.465,4.465,0,0,0,4.472,4.472h9.068a4.465,4.465,0,0,0,4.472-4.472V10.718a4.465,4.465,0,0,0-4.472-4.472m-4.534,15.01a6,6,0,1,1,6-6,6.02,6.02,0,0,1-6,6m5.91-11.007a.907.907,0,1,1,.907-.907.9.9,0,0,1-.907.907"
+                      transform="translate(-1.537 -1.537)" fill="#c70000" fill-rule="evenodd" />
+                <path id="Path_59" data-name="Path 59" d="M16.885,12.882a4,4,0,1,0,4,4,3.985,3.985,0,0,0-4-4"
+                      transform="translate(-3.17 -3.17)" fill="#c70000" fill-rule="evenodd" />
+              </g>
+            </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hidden lg:block">
+          <div class="my-5 absolute right-72">
+            <svg xmlns="http://www.w3.org/2000/svg" width="525.587" height="162.905" viewBox="0 0 525.587 162.905">
+              <g id="Group_20" data-name="Group 20" transform="translate(-1145.448 -5488.225)">
+                <path id="Path_35" data-name="Path 35"
+                      d="M7052.313,4879.514c147.388,132.721,257.592-18.573,391,21.5s129.364,135.932,129.364,135.932"
+                      transform="translate(-5903.673 612.103)" fill="none" stroke="#c70000" stroke-linecap="round"
+                      stroke-width="4" />
+                <line id="Line_4" data-name="Line 4" x2="3" y2="22" transform="translate(1148.826 5491.603)" fill="none"
+                      stroke="#c70000" stroke-linecap="round" stroke-width="6" />
+                <line id="Line_5" data-name="Line 5" x2="21" transform="translate(1148.826 5491.616)" fill="none"
+                      stroke="#c70000" stroke-linecap="round" stroke-width="6" />
+              </g>
+            </svg>
+          </div>
+          <div class="absolute right-40 mt-48">
+            <p class="font-medium text-5xl" style="font-family: Reenie">Sledujte mě :-)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <h2 class="text-4xl text-center pt-32 mb-10 lg:text-4xl font-bold lg:tracking-tight text-[#C70000]">
+      Adresa kanceláře
+    </h2>
+
+  </div>
+  <iframe class="mt-5"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2592.863463685046!2d17.959502777017896!3d49.46819447142132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713917a29f374db%3A0xd6c8633f6b61a2f8!2zUmVrbGFtbsOtIGFnZW50dXJhIFRvbcOhxaEgU2zDoW1h!5e0!3m2!1scs!2scz!4v1691054560206!5m2!1scs!2scz"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+</article>
+
+<style>
+    button:disabled {
+        opacity: .25;
+        cursor: not-allowed;
+    }
+</style>
+
+<script>
+  console.clear();
+
+  var app = new Vue({
+    el: "#app",
+    data: {
+      fullName: "",
+      email: "",
+      message: ""
+    },
+    computed: {
+      isValid() {
+        return this.fullName &&
+          this.email &&
+          this.message;
+      }
+    },
+    methods: {
+      submit() {
+
+      }
+    }
+  });
+</script>

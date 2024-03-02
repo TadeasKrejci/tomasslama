@@ -1,0 +1,81 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "/public/assets/hero.png";
+import Ref1 from "../../public/assets/hero.png";
+---
+<div id="reference" class="container pt-10 md:mt-0 text-center m-auto">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-[#C70000]">
+    Reference
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Seznam realizovaných prací.
+  </p>
+  
+  <div class="flex flex-col-4 mt-12">
+    <div class="p-5">
+      <Picture
+        src={Ref1}
+        alt="Shoptet e-shopy"
+        widths={[200, 400, 800]}
+        aspectRatio="4:3"
+        sizes="(max-width: 800px) 100vw, 800px"
+        loading="eager"
+        format="avif"
+        draggable="false"
+      />
+      <h2 class="mt-5">Bigboardy</h2>
+    </div>
+    <div class="p-5">
+    <Picture
+        src={Ref1}
+        alt="Shoptet e-shopy"
+        widths={[200, 400, 800]}
+        aspectRatio="4:3"
+        sizes="(max-width: 800px) 100vw, 800px"
+        loading="eager"
+        format="avif"
+        draggable="false"
+      />
+      <h2 class="mt-5">Webový design</h2>
+    </div>
+    <div class="p-5">
+      <Picture
+        src={Ref1}
+        alt="Shoptet e-shopy"
+        widths={[200, 400, 800]}
+        aspectRatio="4:3"
+        sizes="(max-width: 800px) 100vw, 800px"
+        loading="eager"
+        format="avif"
+        draggable="false"
+      />
+      <h2 class="mt-5">Shoptet e-shopy</h2>
+    </div>
+
+    <div class="p-5">
+      <Picture
+        src={Ref1}
+        alt="Shoptet e-shopy"
+        widths={[200, 400, 800]}
+        aspectRatio="4:3"
+        sizes="(max-width: 800px) 100vw, 800px"
+        loading="eager"
+        format="avif"
+        draggable="false"
+      />
+      <h2 class="mt-5">Grafické práce</h2>
+    </div>
+
+
+  </div>
+  
+</div>
+
+
+<style>
+
+</style>
+
+<script>
+
+</script>

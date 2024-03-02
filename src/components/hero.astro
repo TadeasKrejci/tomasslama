@@ -1,0 +1,44 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "/public/assets/hero.png";
+import Link from "@components/ui/link.astro";
+---
+<div class="container mx-auto px-5 lg:px-40 lg:mb-12 h-full mt-20">
+<main id="hero"
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 md:block">
+  <Picture
+      src={heroImage}
+      alt="Shoptet e-shopy"
+      widths={[200, 400, 800]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 800px"
+      loading="eager"
+      format="avif"
+      draggable="false"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-[29px] lg:text-6xl xl:text-[3rem] xl:leading-[3.8rem] font-bold">
+      SHOPTET e-shopy<br>
+      Webové prezentace<br>
+      Grafický a webový design
+    </h1>
+    <div class="w-48 rounded-full border-[#C70000] border-[4px] mt-5"></div>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Pojďme společně vytvořit funkční a poutavé grafické návrhy,
+      webové stránky, nebo e-shop, který bude vydělávat.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="/#sluzby"
+        class="flex gap-1 font-medium bg-[#C70000] hover:bg-red-600 hover:scale-105 rounded-full px-10 items-center justify-center"
+        rel="noopener">
+        Začněme!
+      </Link>
+    </div>
+  </div>
+</main>
+</div>
+
